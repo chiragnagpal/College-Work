@@ -1,4 +1,3 @@
-;this is being tracked by git
 section .data                
 msg:db 'Hello World',10      ;message and newline
 msg_l: equ $-msg
