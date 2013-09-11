@@ -36,6 +36,16 @@ add esi,04
 dec byte[count]
 jnz loop1
 
+l1:
+rol ebx, 04h
+mov dl, bl
+and dl, 0fh
+cmp dl, 09h
+jbe l2
+add dl, 07h
+
+l2:
+add d1, 30h
 
 
 
