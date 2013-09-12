@@ -69,4 +69,24 @@ mov ebx, 0
 disp_num:
 
 mov edi, dnum_buff
- 
+mov ecx, 02
+
+dispup1:
+
+rol bl, 4
+mov dl, bl
+and dl, 0fh
+and dl, 30h
+cmp dl, 39h
+jbe dispskip1
+add dl, 07h
+
+dispskip1:
+
+mov [edi], dl
+inc edi
+loop dispup1
+
+dispmsg dnum_buff, 2
+
+ret
