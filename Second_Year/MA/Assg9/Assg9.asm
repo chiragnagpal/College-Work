@@ -1,16 +1,27 @@
 section .data
 
+
+
+
 arr_msg db 'Array Elements Are', 0
+arr_len: equ $-arr_msg
+
 nwline db 10
+
+larg_msg db 'Largest Number is:', 0
+larg_len: equ $-larg_msg
+
 array db 10h, 20h, 0ffh, 40h, 50h
 arrcnt dd 05h
+
+
 
 section .bss
  
 dnum_buff resb 2
 lare resb 1
 
-%macro dispmsg2
+%macro dispmsg 2
  
 mov eax, 4
 mov ebx, 1
@@ -50,7 +61,7 @@ lup1:
 inc esi
 cmp al, [esi]
 ja lskip1
-xchn al, [esi]
+xchg al, [esi]
 
 lskip1:
 
