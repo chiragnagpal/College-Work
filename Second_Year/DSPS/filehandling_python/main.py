@@ -17,8 +17,6 @@ def main():
         if c == 65 or c == 97 or c == 69 or c == 101 or c == 73 or c == 105 or c == 79 or c == 111 or c == 85 or c == 117:
             v+=1
         
-        
-        
         if (c==32):  
             s+=1    
             wflag=1  
